@@ -190,3 +190,20 @@ $(document).ready(function()
 	}
 
 });
+window.onload = function() {
+    // Show the popup every time the page loads
+    document.getElementById('popup').style.display = 'block';
+
+    // Close popup functionality
+    document.getElementById('close-popup').onclick = function() {
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    // Close the popup if user clicks outside the popup-content
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('popup')) {
+            document.getElementById('popup').style.display = 'none';
+        }
+    }
+}
+
